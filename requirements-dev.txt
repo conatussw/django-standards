@@ -9,3 +9,10 @@ pytest
 pytest-cov
 pytest-django
 ruff==0.4.*
+
+# Tooling for documentation
+# https://realpython.com/python-project-documentation-with-mkdocs/
+
+mkdocs
+mkdocstrings[python]
+mkdocs-material
