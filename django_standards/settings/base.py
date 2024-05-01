@@ -33,8 +33,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party libraries
+    'widget_tweaks',
+
     # Apps
     'users',
+    'htmx_basic',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,13 @@
+{% extends 'htmx_basic/base.html' %}
+
+{% block content %}
+
+<div class="align-center col-8 offset-2">
+    <p class="lead mb-3 ml-0">Basic Sample</p>
+    <hr/>
+    <ul>
+      <li><a href="{% url 'htmx_basic:create' %}">Get name length during product name input</a></li>
+    </ul>
+</div>
+
+{% endblock content %}
