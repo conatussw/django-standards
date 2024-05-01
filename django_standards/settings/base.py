@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
     # 3rd party libraries
     'widget_tweaks',
+    'django_extensions',
 
     # Apps
     'users',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

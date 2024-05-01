@@ -9,6 +9,7 @@ pytest
 pytest-cov
 pytest-django
 ruff==0.4.*
+django-debug-toolbar
 
 # Tooling for documentation
 # https://realpython.com/python-project-documentation-with-mkdocs/
