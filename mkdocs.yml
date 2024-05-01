@@ -1,9 +1,13 @@
 site_name: Django Standards
 site_url: https://github.com/conatussw/django-standards
 
+plugins:
+  - mkdocstrings
+
 nav:
   - Home: index.md
   - About: about.md
+  - References: references.md
 
 theme:
   name: 'material'

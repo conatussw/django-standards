@@ -24,7 +24,7 @@ services:
       - db
 
   mkdocs:
-    image: squidfunk/mkdocs-material
+    build: docker/mkdocs/.
     ports:
       - "5000:8000"
     volumes:
