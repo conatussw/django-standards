@@ -1,0 +1,43 @@
+{% extends 'todolist/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between mb-4">
+        <h2>Lista de Todos</h2>
+        <button class="btn btn-primary"
+                hx-get="{% url 'todolist:todo_create_modal' %}"
+                hx-target="#dialog"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                data-modal-size="modal-xl">
+            <i class="bi bi-plus-lg"></i> Novo Todo
+        </button>
+    </div>
+
+    <div id="todo-list">
+        {% include 'todolist/partials/todo_list_items.html' %}
+    </div>
+</div>
+
+<!-- Modal Container -->
+<div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div id="dialog" class="modal-dialog"></div>
+</div>
+
+{#<script>#}
+{#    document.body.addEventListener('htmx:afterSwap', function(evt) {#}
+{#        if (evt.detail.target.id === 'modal-container') {#}
+{#            var modal = new bootstrap.Modal(document.getElementById('modal'));#}
+{#            modal.show();#}
+{#        }#}
+{#    });#}
+{##}
+{#    document.body.addEventListener('htmx:beforeSwap', function(evt) {#}
+{#        if (evt.detail.target.id === 'modal-container' && evt.detail.xhr.status === 204) {#}
+{#            evt.detail.shouldSwap = false;#}
+{#            var modal = bootstrap.Modal.getInstance(document.getElementById('modal'));#}
+{#            modal.hide();#}
+{#        }#}
+{#    });#}
+{#</script>#}
+{% endblock %}

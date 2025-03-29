@@ -21,6 +21,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('htmx-basic/', include('htmx_basic.urls')),
+    path('todolist/', include('todolist.urls')),
 
 ]
 

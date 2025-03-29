@@ -4,9 +4,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data/
-    env_file:
-      - ./.env.db
+      - pgdata:/var/lib/postgresql/data/
     environment:
       - POSTGRES_DB=djangodb
       - POSTGRES_USER=postgres
@@ -22,14 +20,5 @@ services:
       - ./.env
     depends_on:
       - db
-
-  mkdocs:
-    build: docker/mkdocs/.
-    ports:
-      - "5000:8000"
-    volumes:
-      - ./:/docs
-    stdin_open: true
-    tty: true
 volumes:
   pgdata:
